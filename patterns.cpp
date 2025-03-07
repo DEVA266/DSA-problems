@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 void pattern1(int n){
   /* link : https://www.naukri.com/code360/problems/n-forest_6570177 */
   for ( int i = 0; i<n; i++){
@@ -27,7 +28,7 @@ void pattern3(int n){
   cout << endl;
 }
 }
-void patern4(int n){
+void pattern4(int n){
   /* link : https://www.naukri.com/code360/problems/triangle_6573690 */
   for(int i=1;i<=n;i++){
 		for(int j=1;j<=i;j++){
@@ -238,7 +239,112 @@ void pattern17(int n){
    cout << endl;
 }
 }
+void pattern18(int n){
+  /* link : https://www.naukri.com/code360/problems/alpha-triangle_6581429 */
+  for (int i =0;i<n;i++){
+    for(char cs = ('A' + (n-1)) ; cs <= ('A' + (n-1)) - i ;cs--){
+        cout << cs << " ";
+    }
+    cout << endl;
+}
+}
+void pattern18_2(int n){
+ /* link : https://www.naukri.com/code360/problems/alpha-triangle_6581429 */
+ //method 2 
+ for (int i=0; i<n; i++)
+ {
+     char ch = 'A' + (n - 1);
+     for (int j=0; j<=i; j++)
+     {
+         cout << ch << " ";
+         ch--;
+     }
+     cout << "\n";
+ }
+}
+void pattern19(int n){
+  /* link : https://www.naukri.com/code360/problems/symmetric-void_6581919 */
+  // Write your code here.
+  int spaces =0;
+  for( int i=0;i<n;i++){
+      // stars
+      for(int j=0;j<n-i;j++){
+          cout << "* ";
+      }
+      
+      // spaces
+      for(int j=0;j<spaces;j++){
+          cout << " ";
+      }
 
+      // stars
+      for(int j=0;j<n-i;j++){
+          cout << "* ";
+      }
+      spaces +=2;
+      cout << endl;
+  }
+  
+  // second half
+  int spacess = (2*n)-2;
+  for (int i=1;i<=n;i++){
+      // stars
+      for(int j=1;j<=i;j++){
+          cout << "* ";
+      }
+
+      // spaces
+      for(int j=0;j<spacess;j++){
+          cout << " ";
+      }
+
+      // stars
+      for(int j=1;j<=i;j++){
+          cout << "* ";
+      }
+      spacess -=2;
+      cout << endl;
+  }
+}
+void pattern20(int n){
+  /* link : https://www.naukri.com/code360/problems/symmetry_6581914 */
+  // Write your code here.
+  int spaces = (2*n)-2;
+  for(int i=1;i<=2*n-1;i++){
+      // stars
+      int stars = i;
+      if(i > n) stars = 2*n-i ;
+
+      for(int j=1;j<=stars;j++){
+          cout << "* ";
+      }
+
+      // spaces
+      for(int j=1;j<=spaces;j++){
+          cout << " ";
+      }
+
+      //stars
+      for(int j=1;j<=stars;j++){
+          cout << "* ";
+      }
+      cout << endl;
+      if(i<n) stars -=2;
+      else stars +=2;
+  }
+}
+void pattern21(int n){
+  /* link : https://www.naukri.com/code360/problems/ninja-and-the-star-pattern-i_6581920 */
+  for(int i=0;i<n;i++){
+    for(int j=0;j<n;j++){
+        if(i == 0 || j == 0 || i == n-1 || j == n-1 ) {
+            cout << "*";
+    }
+    else cout << " ";
+    }
+    cout << endl;
+  }
+}
 
 int main(){
   int n;
