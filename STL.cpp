@@ -1,4 +1,3 @@
-// 
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -54,7 +53,7 @@ void vectors(){
     // insertion in vector
     vector<int> v ; // {100,200,300,400,500}
     v.insert(v.begin(),50); // {50,100,200,300,400,500}
-    v.insert(v.begin()+2,25) ; //{50,100,25,25,200,300,400,500}
+    v.insert(v.begin()+2,2,25) ; //{50,100,25,25,200,300,400,500}
     vector<int> cut(3,50); // {50,50,50}
     v.insert(v.begin(),cut.begin(),cut.end()); // {50,50,50,50,100,25,25,200,300,400,500}
 
@@ -90,16 +89,16 @@ void auto(){
 void list(){
     list<int> li;
     li.push_back(5); // {5}
-    li.emplace_back(3); //{5,4}
+    li.emplace_back(3); //{5,3}
     // we can also do frontend operations in list
-    li.push_front(1); // {1,5,4}
-    li.emplace_front(2); // {2,1,5,4}
+    li.push_front(1); // {1,5,3}
+    li.emplace_front(2); // {2,1,5,3}
 }
 
 void explaindeque(){
     deque<int> li;
     li.push_back(5); // {5}
-    li.emplace_back(3); //{5,4}
+    li.emplace_back(4); //{5,4}
     // we can also do frontend operations in list
     li.push_front(1); // {1,5,4}
     li.emplace_front(2); // {2,1,5,4}
