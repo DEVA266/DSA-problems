@@ -18,7 +18,7 @@ def area_triangle():
     print(f"the area of the triangle with the base {base} and height {height} is {area}")
 
 #swaping two variables
-def swap():
+def swap_temp():
     a = float(input("enter the no1 : "))
     b = float(input("enter no2 : "))
     print(f"the numbers before swapping \n a is {a} \n b is {b}")
@@ -82,3 +82,66 @@ def eq():
         imag = (math.sqrt(abs(dis))) / (2*a)
         print(f"Root 1 : {real} + {imag}i \n Root 2 : {real} - {imag}i")
 
+def swap():
+    a=int(input("enter no "))
+    b=int(input("enter no :"))
+    print("the numbers before swapping \n a is {} \n b is {}".format(a,b))
+    a,b=b,a
+    print("the numbers after swapping \n a is {} \n b is {}".format(a,b))
+
+# check positive negative or zero
+def pos():
+    n=int(input("enter the number : "))
+    if n>0 :
+        print("the number is positive")
+    elif n<0 :
+        print("the number is negative")
+    else :
+        print("the number is zero")
+
+#odd or even
+def odd_even():
+    n=int(input("enter the number : "))
+    if n%2==0 :
+        print("the number is even")
+    else :
+        print("the number is odd")
+
+def leap_year1():
+    year=int(input("enter the year : "))
+    if(year%4 == 0):
+        if(year%100 == 0):
+            if(year%400 == 0):
+                print("{} is a leap year",format(year))
+            else :
+                print("{} is not a leap year",format(year))
+        else :
+            print("{} is a leap year",format(year))
+    else :
+        print("{} is not a leap year",format(year))
+
+def leap_year2():
+    year=int(input("enter the year : "))
+    if(year%400==0):
+        print("{} is a leap year",format(year))
+    elif(year%4==0 and year%100 != 0):
+        print("{} is a leap year",format(year))
+    else :
+        print("{} is not a leap year",format(year))
+
+def prime_number():
+    num = int(input("enter a number :"))
+    flag = False
+    if num == 1 :
+        print(f"{num} is not a prime number")
+    elif num > 1:
+        for i in range(2,int(num/2)):
+            if(num%i) == 0:
+                flag = True
+                break
+    if flag :
+        print(f"{num} is not a prime number")
+    else:
+        print(f"{num} is a prime number")
+
+prime_number()

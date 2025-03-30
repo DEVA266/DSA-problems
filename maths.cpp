@@ -113,6 +113,33 @@ void prime(){
     if(cmt==2) return true;
     else return false;
 }
+
+// euclidean algorithm.
+// gcd (a,b) = gcd(a-b,b) if(a>b)
+// in computational to reduce the time complexity we use
+// gcd(a,b) = gcd(a%b,b) if(a>b)
+
+void gcd(){
+    // link : https://www.geeksforgeeks.org/problems/lcm-and-gcd4516/1
+    int a,b;
+    cin >> "enter a :" >> a;
+    cin >> "enter b : " >> b ;
+    vector<int> v(2);
+    int x=a;
+    int y=b;
+    while(x>0 && y>0){
+        if(x>y) x=x%y;
+        else y=y%x;
+    }
+    if (x==0) v[1] = y;
+    else v[1]=x;
+    
+    int l=(a*b)/v[1];
+    v[0]=l;
+    
+    return v;
+}
+
 int main(){
 
 }
