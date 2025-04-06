@@ -144,4 +144,93 @@ def prime_number():
     else:
         print(f"{num} is a prime number")
 
-prime_number()
+def problem16():
+    n = int(input("enter the number : "))
+    fact = 1
+    if n==0 or n==1 :
+        fact = 1
+        print(f"the factorial of {n} is {fact}")
+    elif n < 0 :
+        print(f"the factorial of negative number does not exist")
+    else :
+        for i in range(1,n+1):
+            fact = fact*i
+        print(f"the factorial of the number {n} is {fact}")
+    
+def problem17():
+    n = int(input("Display the multiplication table of : "))
+    for i in range(1,11):
+        print(f"{n} X {i} = {n*i}")
+
+def problem18():
+    n = int(input("enter the number of terms : "))
+    a,b=0,1
+    if n<0 :
+        print("enter a positive number : ")
+    elif n==1:
+        print("the fibonacci sequences is :",a)
+    else :
+        print("Fibonacci Sequences :")
+        while(n>0):
+            print(a)
+            c = a+b
+            a=b
+            b=c
+            n -=1
+
+def problem19():
+    # armstrong number 
+    n = int(input("enter the number : "))
+    digits = len(str(n))
+    temp = n
+    sum = 0
+    while(temp > 0):
+        last = temp%10
+        sum += last**digits
+        temp = temp//10
+    if sum == n:
+        print(f"{n} is an Armstrong number.")
+    else:
+        print(f"{n} is not an Armstrong number.")
+
+def problem20():
+    start = int(input("starting range : "))
+    end = int(input("enter the end range : "))
+    numbers = []
+    for n in range(start,end+1):
+        digits = len(str(n))
+        temp = n
+        sum = 0
+        while(temp > 0):
+            last = temp%10
+            sum += last**digits
+            temp = temp//10
+        if sum == n :
+            numbers.append(n)
+    print(f"Armstrong numbers between the interval {start} and {end} is : ",numbers)
+
+def problem21():
+    n = int(input("enter the limit : "))
+    s = 0
+    for i in range(1,n+1):
+        sum += i
+    print(f"The Sum of first {n} natural numbers is : {sum}")
+
+def problem22():
+    n1 = int(input("enter the number : "))
+    n2 = int(input("enter the number : "))
+    small = 0
+    if n1<n2:
+        small = n1
+    elif n1>n2:
+        small = n2
+    for x in range(small,1,-1):
+        if ((n1%x==0) and (n2%x==0)):
+            hcf = x
+            print(f"The Highest Common Factor [HCF] of {n1} and {n2} is : {hcf}")
+            break 
+
+problem22()
+
+## problem 21 Lcm need to be finished that is still incompleted
+    
