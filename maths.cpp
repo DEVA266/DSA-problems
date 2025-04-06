@@ -140,6 +140,68 @@ void gcd(){
     return v;
 }
 
+void problem9(){
+    // link : https://www.geeksforgeeks.org/problems/missing-number-in-array1416/1?page=1&sprint=ca8ae412173dbd8346c26a0295d098fd&sortBy=submissions
+
+    // to find the missing element from the given array of size n 
+    int arr[] ;
+    vector<int>&arr;
+        long long sum = 0 ;
+        long long n = arr.size()+1;
+        for(auto num : arr){
+            sum += num;
+        }
+        long long total = (n*(n+1))/2;
+        return total - sum ;
+}
+
+void problem10(){
+    // link : https://www.geeksforgeeks.org/problems/wave-array-1587115621/1?page=1&sprint=ca8ae412173dbd8346c26a0295d098fd&sortBy=submissions
+    long long n = arr.size();
+    for(int i=0;i<n-1;i+=2){
+        swap(arr[i],arr[i+1]);
+    }
+}
+
+void problem11(){
+    // link : https://www.geeksforgeeks.org/problems/maximum-value-in-a-bitonic-array3001/1?page=1&sprint=ca8ae412173dbd8346c26a0295d098fd&sortBy=submissions
+    
+    // method 1 
+    long long size = arr.size();
+        int max = arr[0];
+        for(int i=1;i<size;i++){
+            if(arr[i]>max) max=arr[i];
+            else break ;
+        }
+        return max;
+
+    // method 2 
+    sort(arr.begin(),arr.end());
+    return arr[arr.size()-1];
+
+}
+ void problem12(){
+    // link : https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1?page=1&sprint=ca8ae412173dbd8346c26a0295d098fd&sortBy=submissions
+    // the code exhibits the given time complexity
+    vector<int> maxOfSubarrays(vector<int>& arr, int k) {
+        // code here
+        long long size = arr.size();
+        vector<int> n ;
+        for(int i=0;i<=size-k;i++){
+            int max=arr[i];
+            for(int j=1;j<k;j++){
+                if(arr[i+j]>max) {
+                    max = arr[i+j];
+                }   
+            }
+            n.push_back(max);
+        }
+        return n;
+    }
+ }
+
+
+
 int main(){
 
 }
