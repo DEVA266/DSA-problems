@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 void count_digits(){
     /* link : https://www.geeksforgeeks.org/problems/count-digits5716/1 */
