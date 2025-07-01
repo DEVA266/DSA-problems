@@ -192,6 +192,7 @@ void sort(){
     // to sort an pair , where by taking the second elements , if the second element is same then sort the first element based on the descending order
     sort(a,a+n,comp) ; // before sort {{3,2}, {2,1}, {4,1}} , after sorting {{4,1}, {2,1}, {3,2}}
 }
+
 int main(){
     int n;
     vector();
